@@ -1,1 +1,1 @@
-# This is about UI component library lulu-ui
+# 这是一个关于Vue的UI组件库 lulu-ui
