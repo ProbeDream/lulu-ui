@@ -19,5 +19,8 @@
   "homepage": "https://github.com/ProbeDream/lulu-ui#readme",
   "dependencies": {
     "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.3"
   }
 }
