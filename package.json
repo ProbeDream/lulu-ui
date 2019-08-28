@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ProbeDream/lulu-ui/issues"
   },
-  "homepage": "https://github.com/ProbeDream/lulu-ui#readme"
+  "homepage": "https://github.com/ProbeDream/lulu-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
