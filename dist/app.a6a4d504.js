@@ -12423,7 +12423,16 @@ exports.default = void 0;
 //
 //
 var _default = {
-  props: ['icon', 'iconPosition']
+  props: {
+    'icon': {},
+    'iconPosition': {
+      type: String,
+      default: 'left',
+      validator: function validator(value) {
+        return ['right', 'left'].indexOf(value) !== -1;
+      }
+    }
+  }
 };
 exports.default = _default;
         var $15bc3b = exports.default || module.exports;

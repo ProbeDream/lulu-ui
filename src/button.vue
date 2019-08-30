@@ -11,7 +11,14 @@
 </template>
 <script>
 export default {
-    props:['icon','iconPosition']
+    props:{
+        'icon':{},'iconPosition':{
+            type:String,default:'left',
+            validator(value){
+                return ['right','left'].indexOf(value) !== -1;
+            }
+        }
+    }
 }
 </script>
 <style lang="scss">
