@@ -1,18 +1,20 @@
 <template>
-        <button class="l-button"  :class="{[`icon-${iconPosition}`]:true}">
-            <l-icon v-if="icon" :name="icon"></l-icon>
-            <l-icon name="Loading" class="loading"></l-icon>
+        <button class="l-button"  :class="{[`icon-${iconPosition}`]: true}">
+            <l-icon class="icon" v-if="icon && !loading" :name="icon"></l-icon>
+            <l-icon name="Loading" v-if="loading" class="loading"></l-icon>
             <div class="content">
                 <slot></slot>
             </div>
         </button>
-    
 </template>
 <script>
 export default {
     props:{
-        'icon':{},'iconPosition':{
-            type:String,default:'left',
+        icon:String,
+        loading:{type:Boolean,default:false},
+        iconPosition:{
+            type:String,
+            default:'left',
             validator(value){
                 return ['right','left'].indexOf(value) !== -1;
             }
@@ -32,13 +34,13 @@ export default {
         &:hover {border-color: var(--border-color-hover);}
         &:active {background-color: var(--button-active-bg);}
         &:focus {outline: none;}
-        > .icon{order: 1;}
-        > .content{order: 2;margin-right: .1em;}
-        &.icon-right{
-           > .content{order: 1;}
-           > .icon{order: 2;margin-left: .1em;}
-        }
         .loading{animation:spin 1s infinite linear;}
     }
-    
+    > .content{order: 2;margin-right: .1em;}
+    > .icon{order: 1;}
+    .icon-right{
+        > .content{order: 1;}
+        > .icon{order: 2;margin-left: .1em;}
+    }
 </style>
+
