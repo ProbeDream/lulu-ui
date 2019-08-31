@@ -1,7 +1,7 @@
 <template>
-        <button class="l-button"  :class="{[`icon-${iconPosition}`]: true}">
+        <button class="l-button"  :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
             <l-icon class="icon" v-if="icon && !loading" :name="icon"></l-icon>
-            <l-icon name="Loading" v-if="loading" class="loading"></l-icon>
+            <l-icon name="Loading" v-if="loading" class="loading icon"></l-icon>
             <div class="content">
                 <slot></slot>
             </div>
@@ -35,12 +35,12 @@ export default {
         &:active {background-color: var(--button-active-bg);}
         &:focus {outline: none;}
         .loading{animation:spin 1s infinite linear;}
-    }
-    > .content{order: 2;margin-right: .1em;}
-    > .icon{order: 1;}
-    .icon-right{
-        > .content{order: 1;}
-        > .icon{order: 2;margin-left: .1em;}
+        > .icon{order: 1;}
+        > .content{order: 2;margin-right: .1em;}
+        &.icon-right{
+            > .icon{order: 2;margin-left: .1em;}
+            > .content{order: 1;}
+        }
     }
 </style>
 

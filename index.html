@@ -33,12 +33,14 @@
     <l-button :loading="true"  >
         I love front end!
     </l-button>
-    <l-button icon="Down">下</l-button>
-    <l-button icon="Right" icon-position="right">右</l-button>
+    <l-button :loading="loading01" @click="loading01 = !loading01" icon="Down">下</l-button>
+    <l-button :loading="loading02" @click="loading02 = !loading02" icon="Right" icon-position="right">右</l-button>
     <l-button-group>
         <l-button icon="Left">左</l-button>
+            <l-button>更多</l-button>
         <l-button icon="Right" icon-position="right">右</l-button>
     </l-button-group>
+    <div id="test"></div>
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>
