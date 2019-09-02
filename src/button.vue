@@ -10,6 +10,7 @@
 <script>
 import icon from "./icon";
 export default {
+    name:"luluButton",
     components:{
         'l-icon':icon
     },
@@ -26,7 +27,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     @keyframes  spin {
         0%{transform:rotate(0deg);}
         100%{transform:rotate(360deg);}

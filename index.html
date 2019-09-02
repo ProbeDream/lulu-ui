@@ -25,22 +25,37 @@
         #app {margin: 20px;}
     </style>
     <style>
-    
+        .box{margin: 20px 0;}
     </style>
 </head>
 <body>
 <div id="app">
-    <l-button :loading="true"  >
-        I love front end!
-    </l-button>
-    <l-button :loading="loading01" @click="loading01 = !loading01" icon="Down">下</l-button>
-    <l-button :loading="loading02" @click="loading02 = !loading02" icon="Right" icon-position="right">右</l-button>
-    <l-button-group>
-        <l-button icon="Left">左</l-button>
+    <div class="box">
+        <l-button :loading="true"  >
+            I love front end!
+        </l-button>
+        <l-button :loading="loading01" @click="loading01 = !loading01" icon="Down">下</l-button>
+        <l-button :loading="loading02" @click="loading02 = !loading02" icon="Right" icon-position="right">右</l-button>
+    </div>
+    
+    <div class="box">
+        <l-button-group>
+            <l-button icon="Left">左</l-button>
             <l-button>更多</l-button>
-        <l-button icon="Right" icon-position="right">右</l-button>
-    </l-button-group>
-    <div id="test"></div>
+            <l-button icon="Right" icon-position="right">右</l-button>
+        </l-button-group>
+    </div>
+    
+    <div class="box">
+        <l-input value="张三" disabled></l-input>
+        <l-input value="李四" readonly></l-input>
+        <l-input value="王五"></l-input>
+    </div>
+    
+    <div class="box">
+        <l-input value="王" error="名字不能少于两个字!"></l-input>
+    </div>
+    
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>

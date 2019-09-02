@@ -6,11 +6,12 @@
 
 <script>
 export default {
+    name:"luluIcon",
     props:['name']
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .l-icon {
         width: 1em; height: 1em;
         vertical-align: -0.15em;
