@@ -47,7 +47,9 @@
     </div>
     
     <div class="box">
-        <l-input value="王五" @change="inputChange"></l-input>
+        <l-input v-model="message"></l-input>
+        <p>{{message}}</p>
+        <button @click="mesage+=1"></button>
     </div>
     
     

@@ -8,7 +8,7 @@ Vue.component('l-icon',Icon);
 Vue.component('l-button-group',ButtonGroup);
 Vue.component('l-input',Input);
 let app = new Vue({el: '#app',
-    data:{loading01:false,loading02:true,loading03:false},
+    data:{loading01:false,loading02:true,loading03:false,message:'hi'},
     created() {
         setTimeout(() => {
             let event = new Event('change');
