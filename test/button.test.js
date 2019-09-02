@@ -15,9 +15,10 @@ describe('Button',()=>{
                   icon:'settings'
               }
           }).$mount();
-          const useElement = vm.$el.querySelector('use');
-          expect(useElement.getAttribute('xlink:href')).to.equal('#icon-settings');
-          vm.$destroy();
+        const useElement = vm.$el.querySelector('use');
+        const href = useElement.getAttribute('xlink:href');
+        expect(href).to.equal('#icon-settings');
+        vm.$destroy();
     });
     it('可以设置Loading',()=>{
         const Constructor = Vue.extend(Button);
@@ -27,8 +28,9 @@ describe('Button',()=>{
             }
         }).$mount();
         const useElement = vm.$el.querySelectorAll('use');
+        const href = useElement[0].getAttribute('xlink:href');
         expect(useElement.length).to.equal(1);
-        expect(useElement[0].getAttribute('xlink:href')).to.equal('#icon-Loading');
+        expect(href).to.equal('#icon-Loading');
         vm.$destroy();
     });
     it('icon默认的order是1', ()=>{
@@ -47,7 +49,7 @@ describe('Button',()=>{
     });
     it('通过iconPosition可以改变对应的order',()=>{
         const div = document.createElement('div');
-        document.body.appendChild('div');
+        document.body.appendChild(div);
         const Constructor = Vue.extend(Button);
         const vm = new Constructor({
             propsData:{
@@ -60,7 +62,7 @@ describe('Button',()=>{
         vm.$destroy();
     });
     it('点击Button触发click事件',()=>{
-        const Constructor = Vue.extends(Button);
+        const Constructor = Vue.extend(Button);
         const vm = new Constructor({
             propsData:{
                 icon:'settings'

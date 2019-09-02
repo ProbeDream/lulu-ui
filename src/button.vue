@@ -8,7 +8,11 @@
         </button>
 </template>
 <script>
+import icon from "./icon";
 export default {
+    components:{
+        'l-icon':icon
+    },
     props:{
         icon:String,
         loading:{type:Boolean,default:false},
