@@ -3,10 +3,14 @@ import Button from './button';
 import Icon from './icon';
 import ButtonGroup from './button-group';
 import Input from './input';
+import Col from './col';
+import Row from './row';
 Vue.component('l-button',Button);
 Vue.component('l-icon',Icon);
 Vue.component('l-button-group',ButtonGroup);
 Vue.component('l-input',Input);
+Vue.component('l-col',Col);
+Vue.component('l-row',Row);
 let app = new Vue({el: '#app',
     data:{loading01:false,loading02:true,loading03:false,message:'hi'},
     created() {

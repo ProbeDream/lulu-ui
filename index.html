@@ -49,9 +49,29 @@
     <div class="box">
         <l-input v-model="message"></l-input>
         <p>{{message}}</p>
-        <button @click="mesage+=1"></button>
+        <button @click="message+=1">+1</button>
     </div>
     
+    <l-row>
+        <l-col>1</l-col>
+        <l-col>2</l-col>
+    </l-row>
+    <l-row>
+        <l-col>1</l-col>
+        <l-col>2</l-col>
+        <l-col>3</l-col>
+    </l-row>
+    
+    <l-row>
+        <l-col :span="2">1</l-col>
+        <l-col :span="22">2</l-col>
+    </l-row>
+    
+    <l-row gutter="20">
+        <l-col span="4">1</l-col>
+        <l-col span="4" offset="6">11</l-col>
+        <l-col span="8" offset="2">11</l-col>
+    </l-row>
     
 </div>
 <!--引入对应的Vue-->
