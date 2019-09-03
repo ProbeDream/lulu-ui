@@ -33,7 +33,7 @@ describe('Row',()=>{
         });
     });
 
-    it('接收align属性',(align)=>{
+    it('接收align属性',()=>{
         const div = document.createElement('div');
         document.body.appendChild(div);
         const Constructor = Vue.extend(Row);
@@ -41,6 +41,7 @@ describe('Row',()=>{
             propsData:{align:'right'}
         }).$mount(div);
         const element = vm.$el;
+        console.log(getComputedStyle(element).justifyContent);
         expect(getComputedStyle(element).justifyContent).to.equal('flex-end');
         element.remove();
         vm.$destroy();

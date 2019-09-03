@@ -25,7 +25,6 @@ export default {
            return [align && `align-${align}`]
         }
     },
-    props:{gutter:{type:[String,Number]}},
     mounted() {
         //row挂载的时候 将对应的子元素col数组遍历出来 并且将对应的gutter赋值给每个col的实例对象!
         this.$children.forEach(vm=>{vm.gutter = this.gutter;});
