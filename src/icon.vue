@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import  './assets/iconfont'
 export default {
     name:"luluIcon",
     props:['name']

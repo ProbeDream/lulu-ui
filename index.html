@@ -26,6 +26,11 @@
     </style>
     <style>
         .box{margin: 20px 0;}
+        .demo{
+            background-color: #ddd;
+            height: 100px;
+            border:1px solid #666;
+        }
     </style>
 </head>
 <body>
@@ -53,14 +58,38 @@
     </div>
     
     
-    <l-row gutter="20">
-        <l-col span="22"  :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" :wide-pc="{span:1}">1</l-col>
-        <l-col span="2"  :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" :wide-pc="{span:23}">11</l-col>
+    <l-row >
+        <l-col span="24" :narrow-pc="{span:8}"  >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}" >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}"  >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}" >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}"  >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}" >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}"  >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}" >
+            <div class="demo"></div>
+        </l-col>
+        <l-col span="24" :narrow-pc="{span:8}"  >
+            <div class="demo"></div>
+        </l-col>
     </l-row>
     
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>
-<script src="./src/assets/iconfont.js"></script>
 </body>
 </html>
