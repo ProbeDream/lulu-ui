@@ -24,9 +24,9 @@ describe('Row',()=>{
            const row = vm.$el.querySelector('.row');
            expect(getComputedStyle(row).marginRight).to.equal('-10px');
            expect(getComputedStyle(row).marginLeft).to.equal('-10px');
-           const col = vm.$el.querySelector('.col');
-           expect(getComputedStyle(col[0]).paddingRight).to.equal('10px');
-           expect(getComputedStyle(col[0]).paddingLeft).to.equal('10px');
+           const cols = vm.$el.querySelectorAll('.col');
+           expect(getComputedStyle(cols[0]).paddingRight).to.equal('10px');
+           expect(getComputedStyle(cols[0]).paddingLeft).to.equal('10px');
            done();
            vm.$el.remove();
            vm.$destroy();
@@ -39,7 +39,7 @@ describe('Row',()=>{
         const Constructor = Vue.extend(Row);
         const vm = new Constructor({
             propsData:{align:'right'}
-        }).$mount();
+        }).$mount(div);
         const element = vm.$el;
         expect(getComputedStyle(element).justifyContent).to.equal('flex-end');
         element.remove();
