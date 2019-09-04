@@ -10,6 +10,8 @@ import Footer from './footer';
 import Content from './content';
 import Layout from './layout';
 import Sider from './sider';
+import Toast from './toast';
+import plugin from "./plugin";
 Vue.component('l-button',Button);
 Vue.component('l-icon',Icon);
 Vue.component('l-button-group',ButtonGroup);
@@ -21,19 +23,13 @@ Vue.component('l-footer',Footer);
 Vue.component('l-content',Content);
 Vue.component('l-layout',Layout);
 Vue.component('l-sider',Sider);
+Vue.component('l-toast',Toast);
+Vue.use(plugin);
 let app = new Vue({el: '#app',
     data:{loading01:false,loading02:true,loading03:false,message:'hi'},
-    created() {
-        setTimeout(() => {
-            let event = new Event('change');
-            let inputElement = this.$el.querySelector('input');
-            inputElement.dispatchEvent(event);
-            console.log('dispatchEvent Event Done!');
-        }, 1000);
-    },
     methods:{
-        inputChange(event){
-            console.log(event);
+        showToast(){
+            this.$toast('Im a toast!');
         }
     }
 });
