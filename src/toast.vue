@@ -26,7 +26,8 @@ export default {
             });
         },execAutoClose(){
             if (this.autoClose){setTimeout(()=>{this.close();},this.autoCloseDelay*1000)}
-        },close(){this.$el.remove();this.$destroy();
+        },close(){
+            this.$el.remove();this.$destroy();this.$emit('close');
         },onClickClose(){
             this.close();
             if (this.closeButton && typeof this.closeButton.callback === 'function' ){
