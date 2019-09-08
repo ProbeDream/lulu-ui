@@ -28,7 +28,9 @@ describe('Toast',()=>{
              const Constructor = Vue.extend(Toast);
              const vm = new Constructor({
                  propsData:{
-                     text:'关闭吧',callback
+                     closeButton:{
+                         text:'关闭吧',callback
+                     }
                  }
              }).$mount();
              let closeButton = vm.$el.querySelector('.close');
@@ -44,8 +46,8 @@ describe('Toast',()=>{
             const Constructor = Vue.extend(Toast);
             const vm = new Constructor({
                 propsData:{enableHTML:true}
-            })
-            vm.$slot.default = ['<strong id="test">hihi</strong>']
+            });
+            vm.$slots.default = ['<strong id="test">hihi</strong>']
             vm.$mount();
             let strong = vm.$el.querySelector('#test');
             expect(strong).to.exist;
