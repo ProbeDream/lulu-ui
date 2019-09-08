@@ -36,7 +36,7 @@ let app= new Vue({el: '#app',
                     text:'已充值',callback(){
                         console.log('他说已经充值智商了');
                     }
-                },autoClose: false,autoCloseDelay: 3
+                },autoClose:3
             })
         },showToast1(){
             this.showToast('top');

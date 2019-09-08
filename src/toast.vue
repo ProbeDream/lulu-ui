@@ -17,7 +17,9 @@
 export default {
     name:"l-Toast",
     props:{
-        autoClose:{type:Boolean,default:true},
+        autoClose:{type:[Boolean,Number],default:5,validator(value) {
+                return value === false || typeof value === 'number';
+            }},
         autoCloseDelay:{type:Number,default:50},
         closeButton:{type:Object,default(){return {text:'关闭',callback:undefined}}},
         enableHTML:{type:Boolean,default:false},
@@ -42,7 +44,7 @@ export default {
                 this.$refs.line.style.height = `${this.$refs.toast.getBoundingClientRect().height}px`
             });
         },execAutoClose(){
-            if (this.autoClose){setTimeout(()=>{this.close();},this.autoCloseDelay*1000)}
+            if (this.autoClose){setTimeout(()=>{this.close();},this.autoClose*1000)}
         },close(){
             this.$el.remove();this.$emit('close');this.$destroy();
         },onClickClose(){
