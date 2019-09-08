@@ -25,11 +25,24 @@ Vue.component('l-layout',Layout);
 Vue.component('l-sider',Sider);
 Vue.component('l-toast',Toast);
 Vue.use(plugin);
-let app = new Vue({el: '#app',
+
+let app= new Vue({el: '#app',
     data:{loading01:false,loading02:true,loading03:false,message:'hi'},
-    methods:{
+    created(){
+        this.$toast('文字',{
+            enableHTML: false
+        });
+    },methods:{
         showToast(){
-            this.$toast('Im a toast!');
+            this.$toast(`你的智商目前为止${parseInt(Math.random()*100)}你的智商需要充值!`,{
+                position:'middle',
+                enableHTML: false,
+                closeButton:{
+                    text:'已充值',callback(){
+                        console.log('他说已经充值智商了');
+                    }
+                },autoClose: false,autoCloseDelay: 3
+            })
         }
     }
 });
