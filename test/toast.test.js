@@ -9,7 +9,7 @@ describe('Toast',()=>{
     it('存在',()=>{
         expect(Toast).to.exist;
     });
-    describe('props',()=>{
+    describe('props',function(){
         it('接收 autoClose', (done)=>{
              let div = document.createElement('div');
              document.body.appendChild(div);
@@ -28,18 +28,16 @@ describe('Toast',()=>{
              const Constructor = Vue.extend(Toast);
              const vm = new Constructor({
                  propsData:{
-                     closeButton:{
-                         text:'关闭吧',callback
-                     }
+                     closeButton:{text:'关闭吧',callback:callback}
                  }
              }).$mount();
-             let closeButton = vm.$el.querySelector('.close');
-             expect(closeButton.textContent.trim()).to.equals('关闭吧');
+            let closeButton = vm.$el.querySelector('.close');
+            expect(closeButton.textContent.trim()).to.equal('关闭吧');
             setTimeout(()=>{
                 closeButton.click();
-                expect(callback).to.have.been.clicked;
+                expect(callback).to.have.been.called;
                 done();
-            },200);
+            },2000);
         });
 
         it('接收 enableHtml', ()=>{
