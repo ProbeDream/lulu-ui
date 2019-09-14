@@ -17,10 +17,12 @@
 export default {
     name:"l-Toast",
     props:{
-        autoClose:{type:[Boolean,Number],default:5,validator(value) {
+        autoClose:{
+            type:[Boolean,Number],
+            default:5,
+            validator(value) {
                 return value === false || typeof value === 'number';
             }},
-        autoCloseDelay:{type:Number,default:50},
         closeButton:{type:Object,default(){return {text:'关闭',callback:undefined}}},
         enableHTML:{type:Boolean,default:false},
         position:{

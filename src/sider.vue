@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style scoped>
-    .sider{}
+.sider{}
 </style>
