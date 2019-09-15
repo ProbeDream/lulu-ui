@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>lulu-ui</title>
     <style>
-        <!--
-        对应如果需要引入对应的组件库需要引入重置样式-- >
+        <!-- 对应如果需要引入对应的组件库需要引入重置样式-- >
         * {margin: 0;padding: 0;box-sizing: border-box;}
         
         :root {
@@ -27,9 +26,10 @@
 </head>
 <body>
 <div id="app">
-    <button @click="showToast1">Top</button>
-    <button @click="showToast2">middle</button>
-    <button @click="showToast3">bottom</button>
+    <l-tabs>
+        <l-tabs-head></l-tabs-head>
+        <l-tabs-body></l-tabs-body>
+    </l-tabs>
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>
