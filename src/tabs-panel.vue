@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .tabs-panel{
-    &.active{
-        background-color:red;}
+    padding:1em;
+    &.active{}
 }
 </style>
