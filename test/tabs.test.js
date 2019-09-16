@@ -21,7 +21,7 @@ describe('Tabs',()=>{
     it('接受 selected属性',  (done)=>{
         const div = document.createElement('div');
         document.body.appendChild(div);
-        div.innerHtml = `
+        div.innerHTML = `
         <l-tabs selected="finance">
             <l-tabs-head>
                 <l-tabs-item name="woman">美女</l-tabs-item>
