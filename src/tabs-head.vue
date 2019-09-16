@@ -12,9 +12,11 @@
 export default {
     name:'luluTabsHead',
     inject:['eventBus'],
-    created() {
+    mounted() {
       this.eventBus.$on('update:selected',(item,vm)=>{
-          console.log(item);
+           let {width,height,top,left }= vm.$el.getBoundingClientRect();
+          this.$refs.line.style.width = `${width}px`;
+           this.$refs.line.style.left = `${left}px`;
       })
     }
 }
@@ -23,18 +25,25 @@ export default {
 <style lang="scss" scoped>
 $tab-height:40px;
 $blue:blue;
+$border-color:#ddd;
 .tabs-head{
     display:flex;
     height:$tab-height;
-    justify-content: center;
-    border:1px dashed deepskyblue;
+    justify-content: flex-start;
     position: relative;
-    > .wrapper-actions {margin-left: auto;}
+    border-bottom:1px solid $border-color;
+    > .wrapper-actions {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0 1em;
+    }
     > .line{
         position: absolute;
         bottom: 0;
-        width: 100px;
-        border-radius:1px solid $blue;
+        transition:all 350ms;
+        border-bottom:1px solid $blue;
     }
 }
 </style>
