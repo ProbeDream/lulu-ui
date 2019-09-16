@@ -14,6 +14,11 @@ export default {
     methods:{
         handleClick(){
             this.visible = !this.visible;
+            if (this.visible === true){
+                document.body.addEventListener('click',()=>{
+                    this.visible = false;
+                });
+            }
         }
     }
 }
