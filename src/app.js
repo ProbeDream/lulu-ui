@@ -38,7 +38,7 @@ Vue.component('l-tabs-item',tabsItem);
 Vue.use(plugin);
 
 let app= new Vue({el: '#app',
-    data:{loading01:false,loading02:true,loading03:false,message:'hi'},
+    data:{selectedTab:'sports'},
     methods:{
         showToast(position){
             this.$toast(`你的智商目前为止${parseInt(Math.random()*100)}你的智商需要充值!`,{

@@ -6,7 +6,14 @@
 
 <script>
 export default {
-    name:'l-tabs'
+    name:'l-tabs',
+    props:{
+        selected:{type:String,required:true},
+        direction:{
+        type:String,default:'horizontal',
+        validator(value){return ['horizontal','vertical'].indexOf(value) !==-1;}
+        }
+    }
 }
 </script>
 

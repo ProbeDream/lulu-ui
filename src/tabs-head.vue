@@ -1,6 +1,7 @@
 <template>
-    <div>
-    
+    <div class="tabs-head">
+        <slot></slot>
+        <slot name="actions"></slot>
     </div>
 </template>
 
@@ -11,5 +12,7 @@ export default {
 </script>
 
 <style scoped>
-
+.tabs-head{
+    
+}
 </style>

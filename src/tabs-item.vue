@@ -6,7 +6,12 @@
 
 <script>
 export default {
-    name:'l-tabsItem'
+    name:'l-tabsItem',
+    props:{
+        disabled:{
+            type:Boolean,default:false
+        }
+    }
 }
 </script>
 
