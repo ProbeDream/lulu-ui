@@ -40,7 +40,9 @@ Vue.use(plugin);
 let app= new Vue({el: '#app',
     data:{selectedTab:'sports'},
     methods:{
-        showToast(position){
+        yyy(data){
+            console.log(data);
+        },showToast(position){
             this.$toast(`你的智商目前为止${parseInt(Math.random()*100)}你的智商需要充值!`,{
                 position,enableHTML: false,
                 closeButton:{

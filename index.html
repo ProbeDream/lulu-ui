@@ -8,8 +8,8 @@
     <title>lulu-ui</title>
     <style>
         <!-- 对应如果需要引入对应的组件库需要引入重置样式-- >
-        * {margin: 0;padding: 0;box-sizing: border-box;}
-        
+        * {margin: 0; padding: 0;box-sizing:border-box;}
+        img{max-width: 100%;}
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -20,23 +20,25 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
-        body {font-size: var(--font-size);}
-        #app {margin: 20px;}
+        body {font-size: var(--font-size);margin: 0;padding: 0;}
     </style>
 </head>
 <body>
 <div id="app">
-    <l-tabs :selected.sync="seletedTab">
+    <l-tabs :selected.sync="selectedTab" @update:selected="yyy">
         <l-tabs-head>
                <template slot="actions">
                    <button>设置</button>
                </template>
-                <l-tabs-item>
+            
+                <l-tabs-item name="woman">
                     <l-icon name="settings"></l-icon>美女
                 </l-tabs-item>
+           
             <l-tabs-item name="finance" disabled>
                 财经
             </l-tabs-item>
+            
             <l-tabs-item name="sports">
                 体育
             </l-tabs-item>
