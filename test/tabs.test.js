@@ -20,7 +20,7 @@ describe('Tabs',()=>{
     });
     it('接受 selected属性',  (done)=>{
         const div = document.createElement('div');
-        document.appendChild(div);
+        document.body.appendChild(div);
         div.innerHtml = `
         <l-tabs selected="finance">
             <l-tabs-head>
