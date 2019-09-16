@@ -37,10 +37,10 @@ describe('Tabs',()=>{
         `;
         let vm = new Vue({el:div});
         vm.$nextTick(()=>{
-            let x = vm.$el.querySelector(`.tabs-item[data-name='finance'`);
+            let x = vm.$el.querySelector(`.tabs-item[data-name='finance']`);
             expect(x.classList.contains('active')).to.be.true;
             done();
-        })
+        });
     });
     it('可以接受direction prop',()=>{
 
