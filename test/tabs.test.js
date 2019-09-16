@@ -42,7 +42,7 @@ describe('Tabs',()=>{
             done();
         })
     });
-    it('可以接受direction prop',() {
+    it('可以接受direction prop',()=>{
 
     });
 });
