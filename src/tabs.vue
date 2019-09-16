@@ -21,7 +21,16 @@ export default {
     },provide(){
         return {eventBus:this.eventBus}
     },mounted() {
-        this.eventBus.$emit('update:selected',this.selected);
+        //之所以这样嵌套遍历是因为 tabs的组件的固定用法是: tabs=> head+body+panel => tabs-item 最后才是单位最小的项 item
+        this.$children.forEach(vm=>{
+            if (vm.$options.name === 'luluTabsHead'){
+                vm.$children.forEach(childVm=>{
+                    if (childVm.$options.name === 'luluTabsItem'){
+                        this.eventBus.$emit('update:selected',this.selected,childVm);
+                    }
+                })
+            }
+        })
     }
 }
 </script>

@@ -17,7 +17,7 @@ export default {
         classes(){return {active:this.active}}
     },methods:{
         handleClick(){
-            this.eventBus.$emit('update:selected',this.name);
+            this.eventBus.$emit('update:selected',this.name,this);
         }
     },created() {
         this.eventBus.$on('update:selected',name=>{
@@ -30,8 +30,15 @@ export default {
 <style lang="scss" scoped>
 .tabs-item{
     flex-shrink:0;padding:0 1em;
+    cursor: pointer;
+    border:1px solid green;
+    height:100%;
+    display: flex;
+    align-items: center;
+    $blue:blue;
     &.active{
-        background-color: red;
+    color:$blue;
+    font-weight: bold;
     }
 }
 </style>
