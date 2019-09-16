@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'l-Header'
+    name:'luluHeader'
 }
 </script>
 

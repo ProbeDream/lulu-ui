@@ -7,7 +7,7 @@
 <script>
 import Vue from 'vue';
 export default {
-    name:'l-tabs',
+    name:'luluTabs',
     props:{
         selected:{type:String,required:true},
         direction:{

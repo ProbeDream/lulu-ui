@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name:'l-tabsHead',
+    name:'luluTabsHead',
     inject:['eventBus'],
     created() {
         this.$emit('update:selected','tabs-head抛出的数据!')

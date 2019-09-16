@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'l-Sider'
+    name:'luluSider'
 }
 </script>
 

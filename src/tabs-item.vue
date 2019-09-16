@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'l-tabsItem',
+    name:'luluTabsItem',
     inject:['eventBus'],
     props:{
         disabled:{type:Boolean,default:false},

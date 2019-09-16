@@ -6,7 +6,7 @@
 
 <script>
 export default {
-   name:'l-Layout'
+   name:'luluLayout'
 }
 </script>
 

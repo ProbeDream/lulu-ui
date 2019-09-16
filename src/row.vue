@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:"lRow",
+    name:"luluRow",
     props:{
       gutter:{
         type:[Number,String]

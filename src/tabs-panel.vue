@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'l-tabsPanel',
+    name:'luluTabsPanel',
     inject:['eventBus'],
     data(){
         return {active:false}
