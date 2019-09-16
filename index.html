@@ -21,38 +21,17 @@
             --border-color-hover: #666;
         }
         body {font-size: var(--font-size);margin: 0;padding: 0;}
+        #app{padding-top: 100px;padding-left: 100px;}
     </style>
 </head>
 <body>
 <div id="app">
-    <!-- util test -->
-    <l-tabs>
-        <div>hi</div>
-    </l-tabs>
-    <l-tabs :selected.sync="selectedTab" @update:selected="yyy">
-        <l-tabs-head>
-               <template slot="actions">
-                   <button>设置</button>
-               </template>
-            
-                <l-tabs-item name="woman" disabled>
-                    <l-icon name="settings"></l-icon>美女
-                </l-tabs-item>
-           
-            <l-tabs-item name="finance" >
-                财经
-            </l-tabs-item>
-            
-            <l-tabs-item name="sports">
-                体育
-            </l-tabs-item>
-        </l-tabs-head>
-        <l-tabs-body>
-            <l-tabs-panel name="woman">美女相关资讯</l-tabs-panel>
-            <l-tabs-panel name="finance">财经相关资讯</l-tabs-panel>
-            <l-tabs-panel name="sports">体育相关资讯</l-tabs-panel>
-        </l-tabs-body>
-    </l-tabs>
+    <l-popover>
+        <template slot="content">
+            <div>popover内容</div>
+        </template>
+        <button>Click me</button>
+    </l-popover>
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>

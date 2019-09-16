@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from "vue";
 import Button from './button';
 import Icon from './icon';
 import ButtonGroup from './button-group';
@@ -12,11 +12,13 @@ import Layout from './layout';
 import Sider from './sider';
 import Toast from './toast';
 import plugin from "./plugin";
-import tabsBody from './tabs-body';
-import tabs from "./tabs";
-import tabsHead from './tabs-head';
-import tabsPanel from './tabs-panel';
-import tabsItem from './tabs-item';
+import TabsBody from './tabs-body';
+import Tabs from "./tabs";
+import TabsHead from './tabs-head';
+import TabsPanel from './tabs-panel';
+import TabsItem from './tabs-item';
+import Popover from './popover';
+
 Vue.component('l-button',Button);
 Vue.component('l-icon',Icon);
 Vue.component('l-button-group',ButtonGroup);
@@ -29,12 +31,12 @@ Vue.component('l-content',Content);
 Vue.component('l-layout',Layout);
 Vue.component('l-sider',Sider);
 Vue.component('l-toast',Toast);
-Vue.component('l-tabs-body',tabsBody);
-Vue.component('l-tabs-head',tabsHead);
-Vue.component('l-tabs-panel',tabsPanel);
-Vue.component('l-tabs',tabs);
-Vue.component('l-tabs-item',tabsItem);
-
+Vue.component('l-tabs-body',TabsBody);
+Vue.component('l-tabs-head',TabsHead);
+Vue.component('l-tabs-panel',TabsPanel);
+Vue.component('l-tabs',Tabs);
+Vue.component('l-tabs-item',TabsItem);
+Vue.component('l-popover',Popover);
 Vue.use(plugin);
 
 let app= new Vue({el: '#app',
