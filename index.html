@@ -30,8 +30,9 @@
     
     <div style="overflow: hidden;padding-top: 150px;padding-bottom: 40px;">
         <l-popover>
-            <template slot="content">
+            <template slot="content" slot-scope="{close}">
                 <div>内容内容内容内容</div>
+                <l-button @click="close">离开</l-button>
             </template>
             <l-button>Click me!</l-button>
         </l-popover>
