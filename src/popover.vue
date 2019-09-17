@@ -1,5 +1,5 @@
 <template>
-    <div class="popover" @click.stop="handleClick" ref="popover" >
+    <div class="popover"  ref="popover" >
         <div class="content-wrapper" v-if="visible"  ref="contentWrapper" :class="{[`position-${position}`]:true}">
             <slot name="content"></slot>
         </div>
@@ -9,9 +9,8 @@
     </div>
 </template>
 
-<script>
-import content from "./content";
 
+<script>
 export default {
     name:'luluPopover',
     data(){return {visible:false};},
@@ -21,6 +20,31 @@ export default {
             validator(value){
                 return ['top','bottom','left','right'].indexOf(value) !== -1;
             }
+        },trigger:{
+            type:String,default:'click',
+            validator(value){
+                return ['click','hover'].indexOf(value) !== -1;
+            }
+        }
+    },mounted(){
+        if (this.trigger === 'click'){
+            this.$refs.popover.addEventListener('click',this.handleClick);
+        }else{
+            this.$refs.popover.addEventListener('mouseenter',this.open);
+            this.$refs.popover.addEventListener('mouseleave',this.close);
+        }
+    },destroyed(){
+        if (this.trigger === 'click'){
+            this.$refs.popover.removeEventListener('click',this.handleClick);
+        }else{
+            this.$refs.popover.removeEventListener('mouseenter',this.open);
+            this.$refs.popover.removeEventListener('mouseleave',this.close);
+        }
+    },computed:{
+        openEvent(){
+            return this.trigger === 'click' ? 'click'  : 'mouseenter';
+        },closeEvent(){
+            return this.trigger === 'click' ? 'click'  : 'mouseleave';
         }
     },
     methods:{
