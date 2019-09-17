@@ -29,4 +29,27 @@ describe('Popover',()=>{
             done();
         })
     });
+    xit('可以设置Trigger',(done)=>{
+        Vue.component('l-popover',Popover);
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+        div.innerHTML = `
+            <l-popover>
+                <template trigger="hover" ref="a">
+                    Content!
+                </template>
+                <button>点我</button>
+            </l-popover>
+        `;
+        const vm = new Vue({el:div});
+        setTimeout(()=>{
+            let event = new Event('mouseenter');
+            vm.$el.dispatchEvent(event);
+            vm.$nextTick(()=>{
+                let {contentWrapper} = vm.$refs.a.$refs;
+                expect(contentWrapper).to.exist;
+                done();
+            })
+        },200);
+    })
 });
