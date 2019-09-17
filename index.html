@@ -27,11 +27,29 @@
 <body>
 <div id="app">
     <div class="container">
-        <l-popover>
+        <l-popover position="top">
             <template slot="content">
                 <div>popover内容popover内容popover内容popover内容</div>
             </template>
-            <l-button>Click me</l-button>
+            <l-button>top</l-button>
+        </l-popover>
+        <l-popover position="bottom">
+            <template slot="content">
+                <div>popover内容popover内容popover内容popover内容</div>
+            </template>
+            <l-button>bottom</l-button>
+        </l-popover>
+        <l-popover position="left">
+            <template slot="content">
+                <div>popover内容popover内容popover内容popover内容</div>
+            </template>
+            <l-button>left</l-button>
+        </l-popover>
+        <l-popover position="right">
+            <template slot="content">
+                <div>popover内容popover内容popover内容popover内容</div>
+            </template>
+            <l-button>right</l-button>
         </l-popover>
     </div>
 </div>
