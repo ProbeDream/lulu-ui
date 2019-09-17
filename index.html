@@ -22,16 +22,19 @@
         }
         body {font-size: var(--font-size);margin: 0;padding: 0;}
         #app{padding-top: 100px;padding-left: 100px;border:1px solid red;}
+        .container{overflow: hidden;border:1px solid green;padding: 5px;}
     </style>
 </head>
 <body>
 <div id="app">
-    <l-popover>
-        <template slot="content">
-            <div>popover内容</div>
-        </template>
-        <button>Click me</button>
-    </l-popover>
+    <div class="container">
+        <l-popover>
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <button>Click me</button>
+        </l-popover>
+    </div>
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>
