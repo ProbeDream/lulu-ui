@@ -43,7 +43,7 @@ Vue.component('l-collapse-item',CollapseItem);
 Vue.use(plugin);
 
 let app= new Vue({el: '#app',
-    data:{selectedTab:'2'},
+    data:{selectedTab:['1','2']},
     methods:{
         yyy(data){
             console.log(data);
