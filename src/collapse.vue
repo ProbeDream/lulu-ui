@@ -5,8 +5,16 @@
 </template>
 
 <script>
+import Vue from 'vue';
 export default {
-    name:'luluCollapse'
+    name:'luluCollapse',
+    props:{
+        single:{type:Boolean,default:false}
+    },data(){
+        return {eventBus:new Vue()};
+    },provide(){
+        if (this.single){return {eventBus:this.eventBus}}
+    }
 }
 </script>
 
