@@ -9,11 +9,17 @@ import Vue from 'vue';
 export default {
     name:'luluCollapse',
     props:{
-        single:{type:Boolean,default:false}
+        single:{type:Boolean,default:false},
+        selected:{type:String}
     },data(){
         return {eventBus:new Vue()};
     },provide(){
-        if (this.single){return {eventBus:this.eventBus}}
+        return {eventBus:this.eventBus}
+    },mounted() {
+        this.eventBus.$emit('update:selected',this.selected);
+        this.eventBus.$on('update:selected',name=>{
+            this.$emit('update:Selected',name);
+        })
     }
 }
 </script>

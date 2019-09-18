@@ -27,11 +27,12 @@
 </head>
 <body>
 <div id="app">
-    <l-collapse single>
-        <l-collapse-item title="title1">内容1</l-collapse-item>
-        <l-collapse-item title="title2">内容2</l-collapse-item>
-        <l-collapse-item title="title3">内容3</l-collapse-item>
+    <l-collapse :selected.sync="selectedTab">
+        <l-collapse-item title="title1" name="1">内容1</l-collapse-item>
+        <l-collapse-item title="title2" name="2">内容2</l-collapse-item>
+        <l-collapse-item title="title3" name="3">内容3</l-collapse-item>
     </l-collapse>
+    {{selectedTab}}
 </div>
 <!--引入对应的Vue-->
 <script src='./src/app.js'></script>
