@@ -11,18 +11,14 @@
 import icon from "./icon";
 export default {
     name:"luluButton",
-    components:{
-        'l-icon':icon
-    },
+    components:{'l-icon':icon},
     props:{
         icon:String,
         loading:{type:Boolean,default:false},
         iconPosition:{
             type:String,
             default:'left',
-            validator(value){
-                return ['right','left'].indexOf(value) !== -1;
-            }
+            validator(value){return ['right','left'].indexOf(value) !== -1;}
         }
     }
 }
@@ -47,6 +43,7 @@ export default {
         &:hover {border-color: $border-color-hover;}
         &:active {background-color: $button-active-bg;}
         &:focus {outline: none;}
+        &:disabled{cursor: not-allowed;}
         .loading{animation:spin 1s infinite linear;}
         > .icon{order: 1;}
         > .l-button-content{order: 2;margin-right: .1em;}

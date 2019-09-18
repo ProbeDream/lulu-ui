@@ -1,4 +1,5 @@
 module.exports = {
+    base:"/lulu-ui",
     title: 'LuLuUI',
     description: '一个好用的UI框架',
     themeConfig:{
@@ -15,7 +16,14 @@ module.exports = {
             },
             {
                 title:'组件',
-                children: ['/components/button']
+                children: [
+                    './components/button',
+                    './components/tabs',
+                    './components/input',
+                    './components/grid',
+                    './components/layout',
+                    './components/toast',
+                ]
             }
         ]
     }

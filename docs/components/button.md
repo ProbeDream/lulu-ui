@@ -1,7 +1,10 @@
 ---
-title:button 
+title:Button 
 sidebarDepth:2
 ---
-# 按钮
+# Button 按钮
 使用方式:
-<l-button></l-button>    
+
+<ClientOnly>
+    <button-demos></button-demos>
+</ClientOnly>  
