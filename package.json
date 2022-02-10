@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ProbeDream/lulu-ui#readme",
   "dependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
